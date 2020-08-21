@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <ul class="collection">
+        <% console.log(Proteins) %>
+
+        <% Proteins.forEach(function(db_item) { %>
+       <a href="/proteins/<%=db_item._id%>"><%=db_item.protein%></a> <br>
+        <% }) %>
+    </ul>
+
+    <form action="/proteins/add" method="POST">
+      <input type="text" name="submitProtein">
+      <button type="submit" class="submitProtein">Submit Protein</button>
+    </form>
+  </body>
+</html>

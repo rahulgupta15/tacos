@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%= ProteinDetail.protein %><br><br><br>
+
+    <% ProteinDetail.tacos.forEach(function(db_item) { %>
+        <%=db_item.name%> <br>
+        <%=db_item.condiments%> <br>
+        <%=db_item.sauces%> <br>
+        <%=db_item.description%> <br><br>
+         <% }) %>
+
+    <form action="/proteins/addtaco" method="POST">
+      <input type="hidden" name="hiddenid" value="<%=ProteinDetail._id%>">
+      <label for="taconame">Taco Title:</label><br />
+      <input type="text" name="taconame" /><br />
+      <label for="tacocondiments">Taco Condiments:</label><br />
+      <input type="text" name="tacocondiments" /><br />
+      <label for="tacosauces">Taco Sauces:</label><br />
+      <input type="text" name="tacosauces" /><br />
+      <label for="tacodescription">Taco Description:</label><br />
+      <input type="text" name="tacodescription" /><br />
+      <button type="submit" class="submitProtein">Submit Taco</button>
+    </form>
+  </body>
+</html>
