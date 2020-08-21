@@ -53,7 +53,8 @@ router.post("/add", async function (req, res, next) {
   };
   let result = await proteinModel.create(incoming_data_object);
   console.log(result);
-  res.send("Thank you for submitting protein");
+  res.send(`Thank you for submitting a protein <a href="/proteins/">Add more proteins!</a>`);
+
 });
 
 router.post("/addtaco", async function (req, res, next) {

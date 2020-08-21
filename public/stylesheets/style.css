@@ -1,8 +1,27 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  background-image: url("taco.jpg");
+  background-size: 100%;
+  border: solid black 5px;
+  border-radius: 10px;
 }
 
 a {
-  color: #00B7FF;
+  color: #147D81;
+}
+
+form {
+  background-color: #689A53;
+  width: 500px;
+  padding: 25px;
+  border: solid black 5px;
+  border-radius: 10px;
+}
+
+button {
+  background-color: white;
+  color: #689A53;
+  font-size: 20px;
 }

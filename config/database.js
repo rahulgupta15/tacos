@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/taco',
+mongoose.connect('mongodb://localhost/taco_app',
   { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true }
 );
 

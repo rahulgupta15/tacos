@@ -4,15 +4,20 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <h1>Welcome to the Taco Pairings App</h1>
+    <h3>(site under construction)</h3>
+    <h3>(pairing methodology undergoing research & development)</h3>
+
     <ul class="collection">
         <% console.log(Proteins) %>
-
+    <h3>Select from our currently available protein options</h3>
         <% Proteins.forEach(function(db_item) { %>
        <a href="/proteins/<%=db_item._id%>"><%=db_item.protein%></a> <br>
         <% }) %>
     </ul>
 
     <form action="/proteins/add" method="POST">
+        <h4>Add a new protein!</h4>
       <input type="text" name="submitProtein">
       <button type="submit" class="submitProtein">Submit Protein</button>
     </form>
